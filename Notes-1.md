@@ -81,12 +81,61 @@ namespace Freecodecamp
         static void Main(string[] args)
         {
             string name = "John";
+            char letter ='A'
             int age = 25;
-            double pi = -3.14159;
+            double pi = -3.1415;
             int year;
-              year = 2023;
+            year = 2023;
 
             Console.WriteLine("Age: " + age + " Year: " + year + "  Name: " + name + "  Max Int: " + int.MaxValue);
+        }
+    }
+}
+
+```
+### Converting string to numbers and Boolean data type
+```cs
+using System;
+
+namespace Freecodecamp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string age = "234";
+            int Age=Convert.ToInt32(age);
+            double doubleAge = Convert.ToDouble(age);
+            bool value = true;
+            bool isMale = false;
+            Console.WriteLine("Please enter your name: "+doubleAge);
+        }
+    }
+}
+
+```
+### Operator :
+```cs
+using System;
+
+namespace Freecodecamp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int age = 23;
+            // +,-,*,/,%,++,--
+            age += 10;
+            age++;
+            string name = "John";
+            name += " Doe";
+
+
+            Console.WriteLine("Please enter your name: "+age);
+            Console.WriteLine("Please enter your name: " + name);
+
+
         }
     }
 }
