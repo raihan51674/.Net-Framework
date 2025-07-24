@@ -1,5 +1,5 @@
 ## .Net Framework fisr run :
-```js
+```cs
 //prohram.cs file
 using Beginner.All_Class;
 using System;
@@ -20,7 +20,7 @@ namespace Beginner
 }
 ```
 ### First class 
-```js
+```cs
 //irstsClassRun.cs
 using System;
 using System.Collections.Generic;
@@ -41,6 +41,35 @@ namespace Beginner.All_Class
 
 
 ```
+## User Input
+```cs
+using System;
+
+namespace Freecodecamp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.Write("Please enter your name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Please enter your age: ");
+            int age;
+            while (!int.TryParse(Console.ReadLine(), out age) || age < 0)
+            {
+                Console.Write("Invalid input. Please enter a valid non-negative age: ");
+            }
+
+            Console.WriteLine($"Name       : {name}");
+            Console.WriteLine($"Age        : {age}");
+          
+        }
+    }
+}
+
+```
 ## Data Type :
 ```cs
 using System;
@@ -53,7 +82,9 @@ namespace Freecodecamp
         {
             string name = "John";
             int age = 25;
-            int year = 2023;
+            double pi = -3.14159;
+            int year;
+              year = 2023;
 
             Console.WriteLine("Age: " + age + " Year: " + year + "  Name: " + name + "  Max Int: " + int.MaxValue);
         }
