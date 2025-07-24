@@ -95,35 +95,19 @@ namespace Freecodecamp
 ```
 ### Converting string to numbers and Boolean data type
 ```cs
-using System;
 
-namespace Freecodecamp
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
             string age = "234";
             int Age=Convert.ToInt32(age);
             double doubleAge = Convert.ToDouble(age);
             bool value = true;
             bool isMale = false;
             Console.WriteLine("Please enter your name: "+doubleAge);
-        }
-    }
-}
+
 
 ```
 ### Operator :
 ```cs
-using System;
 
-namespace Freecodecamp
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
             int age = 23;
             // +,-,*,/,%,++,--
             age += 10;
@@ -135,9 +119,5 @@ namespace Freecodecamp
             Console.WriteLine("Please enter your name: "+age);
             Console.WriteLine("Please enter your name: " + name);
 
-
-        }
-    }
-}
 
 ```
