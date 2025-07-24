@@ -216,5 +216,88 @@ public class MyClass
 ```
 ####  2.static(class এর object ছাড়াই call করা যায়)
 ```cs
+class Utility
+{
+    public static void ShowInfo() { }
+    internal static void LogData() { }
+    private static void Calculate() { }
+}
+//jekon class ar vitor call kora jai
+//same vabe program.cs fileo call kora jai
+//private jaina
+Utility.ShowInfo(); 
+
+```
+## All Function type:
+```cs
+using System;
+
+class Utility
+{
+    public void PublicFunction()
+    {
+        Console.WriteLine("Public Function");
+    }
+
+    private void PrivateFunction()
+    {
+        Console.WriteLine("Private Function");
+    }
+
+    protected void ProtectedFunction()
+    {
+        Console.WriteLine("Protected Function");
+    }
+
+    internal void InternalFunction()
+    {
+        Console.WriteLine("Internal Function");
+    }
+
+    protected internal void ProtectedInternalFunction()
+    {
+        Console.WriteLine("Protected Internal Function");
+    }
+
+    private protected void PrivateProtectedFunction()
+    {
+        Console.WriteLine("Private Protected Function");
+    }
+
+    // Function with return and parameter
+    public int Multiply(int a, int b)
+    {
+        return a * b;
+    }
+
+    // Static function
+    public static void StaticShow()
+    {
+        Console.WriteLine("Static function");
+    }
+}
+
+//call
+class Program
+{
+    static void Main(string[] args)
+    {
+        Utility u = new Utility();
+
+        u.PublicFunction();              // ✅
+        u.InternalFunction();            // ✅
+        u.ProtectedInternalFunction();   // ✅
+
+        int result = u.Multiply(5, 4);   // ✅ return type
+        Console.WriteLine(result);
+
+        Utility.StaticShow();           // ✅ static function call
+
+        // ❌ u.PrivateFunction();          // error: private
+        // ❌ u.ProtectedFunction();        // error: protected
+        // ❌ u.PrivateProtectedFunction(); // error: inaccessible
+    }
+}
+
 
 ```
