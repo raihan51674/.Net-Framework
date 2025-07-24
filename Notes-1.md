@@ -155,3 +155,65 @@ namespace Freecodecamp
 }
 
 ```
+## Function and Method :
+#### Function two type : 
+#### 1.normal (objet lage):
+```cs
+class MyClass
+{
+    public void PublicFunc() { }
+    private void PrivateFunc() { }
+    protected void ProtectedFunc() { }
+    internal void InternalFunc() { }
+    protected internal void ProtectedInternalFunc() { }
+}
+//use Program.cs file
+  MyClass obj = new PublicFunc();
+        obj.PublicFunc());
+//private and protected jai nah another public func create kore or vitor call korte hobe
+
+//value pass globally use constructor
+
+public class Person
+{
+    private string name;
+
+    // constructor with parameter
+    public Person(string personName)
+    {
+        name = personName;
+    }
+
+    public void PublicFunc()
+    {
+        Console.WriteLine("Name: " + name);
+    }
+}
+//Manually vabeo parbo
+
+public class MyClass
+{
+    public void Greet(string name)
+    {
+        Console.WriteLine("Hello, " + name + "!");
+    }
+
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+}
+
+    // ✅ object create
+        MyClass obj = new MyClass();
+        obj.Greet("Raihan");
+
+        int result = obj.Add(10, 20);
+        Console.WriteLine("Sum: " + result);
+
+
+```
+####  2.static(class এর object ছাড়াই call করা যায়)
+```cs
+
+```
