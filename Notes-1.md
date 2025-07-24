@@ -41,3 +41,23 @@ namespace Beginner.All_Class
 
 
 ```
+## Data Type :
+```cs
+using System;
+
+namespace Freecodecamp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "John";
+            int age = 25;
+            int year = 2023;
+
+            Console.WriteLine("Age: " + age + " Year: " + year + "  Name: " + name + "  Max Int: " + int.MaxValue);
+        }
+    }
+}
+
+```
