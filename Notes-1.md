@@ -168,7 +168,7 @@ class MyClass
     protected internal void ProtectedInternalFunc() { }
 }
 //use Program.cs file
-  MyClass obj = new PublicFunc();
+  MyClass obj = new MyClass();
         obj.PublicFunc());
 //private and protected jai nah another public func create kore or vitor call korte hobe
 
