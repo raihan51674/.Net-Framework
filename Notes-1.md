@@ -170,7 +170,8 @@ class MyClass
 //use Program.cs file
   MyClass obj = new MyClass();
         obj.PublicFunc());
-//private and protected jai nah another public func create kore or vitor call korte hobe
+//private and protected jai nah another public func create kore or vitor call korte hobe then obj creat created func ar
+
 
 //value pass globally use constructor
 
