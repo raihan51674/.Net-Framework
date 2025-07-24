@@ -124,5 +124,34 @@ namespace Freecodecamp
 
 ```
 ## Array :
-```cs
+```c
+            int[] numPrint = new int[3] { 1, 2, 3 };
+
+            int[] numbers = new int[4];
+
+            Console.WriteLine("Please enter 4 numbers:");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write($"Enter number {i + 1}: ");
+                while (!int.TryParse(Console.ReadLine(), out numbers[i]))
+                {
+                    Console.Write("Invalid input. Please enter a valid integer: ");
+                }
+            }
+            foreach (int num in numbers)
+            {
+                Console.WriteLine(num);
+            }
+
+
+            // Optional: Print numPrint array
+            Console.WriteLine("\nStatic array values:");
+            foreach (int n in numPrint)
+            {
+                Console.WriteLine(n);
+            }
+        }
+    }
+}
+
 ```
