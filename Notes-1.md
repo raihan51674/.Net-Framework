@@ -301,3 +301,98 @@ class Program
 
 
 ```
+### Method :
+```cs
+using System;
+
+namespace MethodExample
+{
+    class ExampleClass
+    {
+        // Public method: globally accessible
+        public void PublicMethod()
+        {
+            Console.WriteLine("✅ This is a PUBLIC method.");
+        }
+
+        // Private method: only accessible inside this class
+        private void PrivateMethod()
+        {
+            Console.WriteLine("🔒 This is a PRIVATE method.");
+        }
+
+        // Protected method: accessible from derived class
+        protected void ProtectedMethod()
+        {
+            Console.WriteLine("🛡️ This is a PROTECTED method.");
+        }
+
+        // Internal method: accessible within the same project/assembly
+        internal void InternalMethod()
+        {
+            Console.WriteLine("🏢 This is an INTERNAL method.");
+        }
+
+        // Protected internal method: accessible from derived class or same assembly
+        protected internal void ProtectedInternalMethod()
+        {
+            Console.WriteLine("🔐 This is a PROTECTED INTERNAL method.");
+        }
+
+        // Private protected method: accessible from derived class in same class only
+        private protected void PrivateProtectedMethod()
+        {
+            Console.WriteLine("🕵️‍♂️ This is a PRIVATE PROTECTED method.");
+        }
+
+        // Accessing private method from inside
+        public void CallPrivate()
+        {
+            PrivateMethod();
+        }
+
+        public void CallPrivateProtected()
+        {
+            PrivateProtectedMethod();
+        }
+    }
+
+    // Inherited class for testing protected & private protected
+    class SubClass : ExampleClass
+    {
+        public void CallFromSubClass()
+        {
+            Console.WriteLine("Inside SubClass:");
+            ProtectedMethod(); // ✅ Allowed
+            ProtectedInternalMethod(); // ✅ Allowed
+            // PrivateProtectedMethod(); // ❌ Not allowed here
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ExampleClass example = new ExampleClass();
+
+            Console.WriteLine("Access from Main:");
+
+            // Accessing methods
+            example.PublicMethod();               // ✅
+            example.InternalMethod();             // ✅
+            example.ProtectedInternalMethod();    // ✅
+            example.CallPrivate();                // ✅ Calls private internally
+            example.CallPrivateProtected();       // ✅
+
+            // example.PrivateMethod();           // ❌ Error
+            // example.ProtectedMethod();         // ❌ Error
+            // example.PrivateProtectedMethod();  // ❌ Error
+
+            // Subclass access
+            SubClass sub = new SubClass();
+            sub.CallFromSubClass(); // ✅ Calls protected & protected internal
+        }
+    }
+}
+
+```
