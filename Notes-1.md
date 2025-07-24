@@ -114,10 +114,15 @@ namespace Freecodecamp
             age++;
             string name = "John";
             name += " Doe";
+          //remainder
+         
 
 
             Console.WriteLine("Please enter your name: "+age);
             Console.WriteLine("Please enter your name: " + name);
 
 
+```
+## Array :
+```cs
 ```
