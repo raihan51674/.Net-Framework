@@ -234,31 +234,37 @@ using System;
 
 class Utility
 {
+  //🟢 Public মানে: যেকোনো জায়গা থেকে (অন্য ক্লাস থেকেও) access করা যাবে।
+  //➡️ u.PublicFunction(); দিয়ে call করা হয়েছে।
     public void PublicFunction()
     {
         Console.WriteLine("Public Function");
     }
 
+
+    // Private মানে: কেবল এই Utility ক্লাসের ভিতরেই access করা যাবে।
+    //
     private void PrivateFunction()
     {
         Console.WriteLine("Private Function");
     }
-
+   //🟠 Protected মানে: কেবল Utility এবং এর child (inherited) class-এ access করা যাবে।
     protected void ProtectedFunction()
     {
         Console.WriteLine("Protected Function");
     }
-
+    //🟢 Internal মানে: একই assembly (একই প্রোজেক্ট/ফাইল) এর মধ্যে access করা যাবে।
     internal void InternalFunction()
     {
         Console.WriteLine("Internal Function");
     }
-
+    //🟡 Protected Internal মানে:অন্য assembly থেকে হলেও inheritance থাকলে
+   //➡️ তাই এটাও object দিয়ে call করা যায়: u.ProtectedInternalFunction();
     protected internal void ProtectedInternalFunction()
     {
         Console.WriteLine("Protected Internal Function");
     }
-
+    🔴 Private Protected মানে:একই assembly তে থাকতে হবে, এবং inheritance এর মাধ্যমে access করতে হবে।
     private protected void PrivateProtectedFunction()
     {
         Console.WriteLine("Private Protected Function");
